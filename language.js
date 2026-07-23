@@ -1,9 +1,10 @@
-// Language toggle for the resume. English is the default; the selected language is persisted.
+// Language toggle for the resume. French is the default; the selected language is persisted.
 (() => {
   const storageKey = "resume-language";
-  const defaultLanguage = "en";
+  const defaultLanguage = "fr";
   const supportedLanguages = ["en", "fr"];
   const toggle = document.querySelector(".language-toggle");
+  const downloadFab = document.querySelector(".download-fab");
 
   if (!toggle) return;
 
@@ -112,6 +113,7 @@
       ],
       download: "Download",
       downloadLabel: "Download resume as PDF",
+      downloadFile: "Resume_Mourtalla_Toure_Software_Engineer.pdf",
       toggleLabel: "Switch language to French",
       newTab: "opens in new tab",
     },
@@ -218,7 +220,8 @@
         ],
       ],
       download: "Télécharger",
-      downloadLabel: "Télécharger le resume en PDF",
+      downloadLabel: "Télécharger le CV en PDF",
+      downloadFile: "Resume_Mourtalla_Toure_Ingenieur_Logiciel.pdf",
       toggleLabel: "Passer en anglais",
       newTab: "s'ouvre dans un nouvel onglet",
     },
@@ -355,6 +358,10 @@
     setLeadingText(document.querySelector(".projects-more a"), translations.projectsMore);
     setLeadingText(document.querySelector(".download-text"), translations.download);
     setAttribute(".download-fab", "aria-label", translations.downloadLabel);
+    if (downloadFab && translations.downloadFile) {
+      downloadFab.href = translations.downloadFile;
+      downloadFab.setAttribute("download", translations.downloadFile);
+    }
 
     translateEducation(translations);
     translateProjects(translations);

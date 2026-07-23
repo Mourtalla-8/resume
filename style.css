@@ -1055,9 +1055,26 @@ body {
 }
 
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  html,
   body {
-    background: #fff;
+    width: auto;
+    height: auto;
+    margin: 0;
     padding: 0;
+    background: #fff;
+    overflow: visible;
+  }
+
+  body {
     display: block;
   }
 
@@ -1067,16 +1084,25 @@ body {
     display: none !important;
   }
 
+  .resume-main {
+    display: block;
+    width: auto;
+  }
+
   .container {
-    width: 100%;
+    width: var(--resume-width);
     max-width: none;
     box-shadow: none;
-    padding: 0;
+    overflow: visible;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   .left,
   .right {
     width: auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   a[href]::after {
