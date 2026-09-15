@@ -7,13 +7,12 @@ import { fileURLToPath } from "node:url";
 const root = fileURLToPath(new URL(".", import.meta.url));
 const port = 9876;
 const storageKey = "resume-language";
-const resumeWidthPx = 750;
+const resumeWidthPx = 794;
 const pdfOutputs = {
   en: join(root, "Resume_Mourtalla_Toure_Software_Engineer.pdf"),
   fr: join(root, "Resume_Mourtalla_Toure_Ingenieur_Logiciel.pdf"),
 };
-const bottomBufferPx = 40;
-const viewportPaddingPx = 80;
+const bottomBufferPx = 0;
 
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
@@ -72,6 +71,8 @@ async function preparePage(page) {
     document.body.style.background = "#fff";
     document.body.style.minHeight = "auto";
     document.body.style.display = "block";
+    document.body.style.zoom = "0.82";
+    document.body.style.width = "100%";
 
     const main = document.querySelector(".resume-main");
     if (main) {
@@ -83,10 +84,46 @@ async function preparePage(page) {
 
     const container = document.querySelector(".container");
     if (container) {
-      container.style.margin = "0";
-      container.style.boxShadow = "none";
-      container.style.overflow = "visible";
-      container.style.width = `${resumeWidthPx}px`;
+      const header = container.querySelector(".header");
+      const education = container.querySelector(".education");
+      const projects = container.querySelector(".projects");
+      const summary = container.querySelector(".summary");
+      const strengths = container.querySelector(".strengths");
+      const skills = container.querySelector(".skills");
+      const languages = container.querySelector(".languages");
+      const interests = container.querySelector(".interests");
+
+      const createColumn = (className, children) => {
+        const column = document.createElement("div");
+        column.className = className;
+        children.filter(Boolean).forEach((child) => column.appendChild(child));
+        return column;
+      };
+
+      const pageOne = document.createElement("div");
+      pageOne.className = "container pdf-page";
+      pageOne.append(
+        createColumn("left", [
+          createColumn("left-up", [summary]),
+          createColumn("left-down", [skills]),
+        ]),
+        createColumn("right", [header, education])
+      );
+
+      const pageTwo = document.createElement("div");
+      pageTwo.className = "container pdf-page";
+      pageTwo.append(
+        createColumn("left", [
+          createColumn("left-down", [strengths, languages, interests]),
+        ]),
+        createColumn("right", [projects])
+      );
+
+      const documentRoot = document.createElement("div");
+      documentRoot.className = "pdf-document";
+      documentRoot.append(pageOne, pageTwo);
+      container.replaceWith(documentRoot);
+
     }
   }, resumeWidthPx);
 
@@ -95,7 +132,7 @@ async function preparePage(page) {
 
 async function measureContainer(page) {
   return page.evaluate(({ bottomBufferPx, resumeWidthPx }) => {
-    const container = document.querySelector(".container");
+    const container = document.querySelector(".pdf-document");
     if (!container) {
       throw new Error("Resume container not found");
     }
@@ -127,7 +164,7 @@ async function measureContainer(page) {
     ) + bottomBufferPx;
 
     return {
-      width: Math.max(Math.ceil(containerRect.width), resumeWidthPx),
+      width: Math.ceil(containerRect.width),
       height,
     };
   }, { bottomBufferPx, resumeWidthPx });
@@ -150,30 +187,21 @@ async function exportPdfForLanguage(browser, port, language, output) {
   try {
     await page.setViewport({
       width: resumeWidthPx,
-      height: 2200,
+      height: 1123,
       deviceScaleFactor: 1,
     });
     await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: "networkidle0", timeout: 60000 });
-    await page.emulateMediaType("screen");
+    await page.emulateMediaType("print");
     await preparePage(page);
 
     const { width, height } = await measureContainer(page);
 
-    await page.setViewport({
-      width,
-      height: height + viewportPaddingPx,
-      deviceScaleFactor: 1,
-    });
-    await preparePage(page);
-
     await page.pdf({
       path: output,
       printBackground: true,
-      width: `${width}px`,
-      height: `${height}px`,
+      format: "A4",
       margin: { top: 0, right: 0, bottom: 0, left: 0 },
-      pageRanges: "1",
-      preferCSSPageSize: false,
+      preferCSSPageSize: true,
     });
 
     console.log(`PDF exported (${language}): ${output} (${width}x${height}px)`);

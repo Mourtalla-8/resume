@@ -12,31 +12,43 @@
     en: {
       documentTitle: "Resume - MOURTALLA TOURE",
       metaDescription:
-        "Resume of Mourtalla Toure - Software Engineer focused on backend development, web and mobile applications, and data analysis.",
+        "Resume of Mourtalla Toure - Software Engineer focused on backend development, APIs, and data analysis.",
       skipLink: "Skip to main content",
       role: "Software Engineer",
       domain: "Junior",
       contactLabel: "Contact information",
-      educationHeading: "EDUCATION",
+      educationHeading: "FORMATION/EDUCATION",
       educationTitles: [
         "Bachelor's in Computer Science - Application Development (Web, Mobile & Gaming)",
         "Data Engineering",
         "Data Analysis Certificate",
+        "Baccalaureate in Secondary Education",
       ],
-      educationDates: ["Nov 2023 – Present", "Feb 2026 – Present", "Completed Oct 2024"],
+      educationDates: ["Nov 2023 – Present", "Feb 2026 – Present", "Completed Oct 2024", "Obtained June 2023"],
+      educationSchools: [
+        "Cheikh Hamidou Kane Digital University (UNCHK)",
+        "FORCE-N",
+        "FORCE-N",
+        "Lycée Technique Ahmadou Bamba de Diourbel",
+      ],
+      educationDescriptions: [
+        "Bachelor's degree focused on practical web, mobile, and game application development.",
+        "Professional training focused on data pipelines, processing, and engineering practices.",
+        "Training covering the foundations of data exploration, interpretation, and reporting.",
+        "In Economics and Management Science and Technologies (STEG).",
+      ],
       educationMore: "Online courses - MOOCs & self-directed learning",
+      educationCredential: "View details",
       projectsHeading: "PROJECTS",
       projectLinks: "View project",
-      projectsMore: "View more on GitHub",
+      projectsMore: "View more projects on GitHub",
       projects: [
         {
           date: "May 2026",
           title: "jwebgen - Jakarta Servlet/JSP Scaffolding CLI",
           stack: "Node.js · Java · Jakarta Servlet · JSP · Maven · npm · Shell & Node Scripts",
           tasks: [
-            "Built and published a cross-platform CLI (npm) that scaffolds Jakarta Servlet/JSP WAR projects with a standard Maven layout",
-            "Generated Node.js (.mjs) and Shell scripts to automate build, deploy (Tomcat/WildFly), live-reload dev, and environment setup",
-            "Shipped with GitHub Actions CI on Linux, macOS, and Windows, plus semantic-release for automated npm publishing",
+            "Development and publication of a cross-platform CLI for Jakarta Servlet/JSP project scaffolding and deployment automation",
           ],
         },
         {
@@ -44,9 +56,7 @@
           title: "CEC - Equal Opportunity Card Management Platform",
           stack: "Angular · Node.js · Express · MongoDB",
           tasks: [
-            "Designed and implemented REST APIs with Node.js/Express for card registration and admin workflows",
-            "Modeled MongoDB schemas and built the server-side business logic",
-            "Integrated an Angular front-end with interactive admin dashboards",
+            "Developed REST APIs, database models, and an Angular administration dashboard",
           ],
         },
         {
@@ -54,9 +64,7 @@
           title: "GOTA - Telecom Operators & Subscribers Management",
           stack: "Python",
           tasks: [
-            "Built a Python application to manage telecom operators and subscribers",
-            "Designed data models and CRUD operations for operator and subscriber records",
-            "Implemented business logic for subscription and operator relationship management",
+            "Developed a Python application for telecom operators, telecom subscribers, and CRUD workflows",
           ],
         },
         {
@@ -64,31 +72,28 @@
           title: "User Settings Panel",
           stack: "HTML · CSS · Bootstrap",
           tasks: [
-            "Created a responsive profile management interface with HTML/CSS and Bootstrap",
-            "Implemented forms for user preferences, profile updates, and security settings",
-            "Applied component-based layout patterns for maintainable UI structure",
+            "Created a responsive profile and security settings interface with HTML, CSS, and Bootstrap",
           ],
         },
       ],
       sidebarLabel: "Profile sidebar",
       summaryHeading: "SUMMARY",
       summary:
-        "Software Engineer building web and mobile applications, with solid experience in server-side development, APIs, and database design. I write clean, maintainable code, work comfortably in Linux environments, and apply data engineering and analysis skills to support informed technical decisions. Collaborative and detail-oriented, with hands-on experience in Agile/Scrum workflows.",
+        "Junior Software Engineer working across backend and frontend development, APIs, databases, and data. Curious and committed to continuous learning, I build clean, maintainable software and adapt quickly to new technologies and project requirements.",
       strengthsHeading: "STRENGTHS",
       strengths: [
         "Strong problem-solving and analytical thinking",
         "Clear communication and effective teamwork",
         "Quick learner with a structured, detail-oriented approach",
-        "Ability to translate requirements into maintainable code",
-        "Self-motivated in collaborative academic projects",
       ],
       skillsHeading: "SKILLS",
       skillGroups: [
-        ["Languages", "Python, JavaScript, TypeScript, PHP, Java, C++, Swift"],
-        ["Backend & APIs", "Next.js, Node.js, Express, Django, FastAPI, Laravel, JEE, REST API, Webhook API, gRPC API, GraphQL API"],
-        ["Web & Mobile", "HTML/CSS, Tailwind, Bootstrap, Angular, Vue, React, React Native"],
-        ["Data & Databases", "SQL, NoSQL, Data Engineering, Data Analysis"],
-        ["DevOps & Tools", "Git, Linux, GitHub (CI/CD), Agile/Scrum"],
+        ["Languages & Scripting", "Python, JavaScript, TypeScript, PHP, Java, C++, Swift, Bash"],
+        ["Backend & APIs", "Node.js, Nest.js, Next.js, Express, Django, FastAPI, Laravel, JEE, REST, GraphQL, gRPC"],
+        ["Frontend & Mobile", "HTML/CSS, Tailwind, Bootstrap, Angular, Vue, React, React Native"],
+        ["Data & Storage", "SQL, NoSQL, MongoDB, Database Modeling, Data Analysis, Data Engineering"],
+        ["Architecture & Design", "Software Architecture, System Design, Data Structures & Algorithms, UML, Design Patterns"],
+        ["DevOps & Collaboration", "Git, GitHub, GitHub Actions (CI/CD), Docker, Linux, Notion, Project Management, Agile/Scrum, Agent Coding"],
       ],
       languagesHeading: "LANGUAGES",
       spokenLanguages: [
@@ -99,16 +104,12 @@
       interestsHeading: "INTERESTS",
       interests: [
         [
-          "Coding for Social Impact",
-          "Passionate about using software to solve meaningful problems - from civic platforms to tools that improve everyday life for communities.",
+          "E-sport",
+          "",
         ],
         [
           "Tech Industry Evolution",
-          "Actively following emerging trends in AI, cloud computing, and modern development practices to stay current and grow as an engineer.",
-        ],
-        [
-          "Gaming",
-          "Enthusiast of strategy and adventure games - a creative outlet that sharpens problem-solving, patience, and strategic thinking.",
+          "",
         ],
       ],
       download: "Download",
@@ -120,31 +121,43 @@
     fr: {
       documentTitle: "Resume - MOURTALLA TOURE",
       metaDescription:
-        "Resume de Mourtalla Toure - Ingénieur logiciel orienté backend, applications web et mobiles, et analyse de données.",
+        "Resume de Mourtalla Toure - Ingénieur logiciel orienté backend, APIs et analyse de données.",
       skipLink: "Aller au contenu principal",
       role: "Ingénieur logiciel",
       domain: "Junior",
       contactLabel: "Coordonnées",
-      educationHeading: "FORMATION",
+      educationHeading: "FORMATION/EDUCATION",
       educationTitles: [
         "Licence en informatique - Développement d'applications (web, mobile et jeux)",
         "Ingénierie des données",
         "Certificat en analyse de données",
+        "Diplôme de bachelier de l'enseignement du second degré",
       ],
-      educationDates: ["Nov. 2023 – Aujourd'hui", "Fév. 2026 – Aujourd'hui", "Obtenu en oct. 2024"],
+      educationDates: ["Nov. 2023 – Aujourd'hui", "Fév. 2026 – Aujourd'hui", "Obtenu en oct. 2024", "Obtenu en juin 2023"],
+      educationSchools: [
+        "Université Numérique Cheikh Hamidou Kane (UNCHK)",
+        "FORCE-N",
+        "FORCE-N",
+        "Lycée Technique Ahmadou Bamba de Diourbel",
+      ],
+      educationDescriptions: [
+        "Formation axée sur le développement pratique d'applications web, mobiles et de jeux.",
+        "Formation professionnelle consacrée aux pipelines, au traitement et à l'ingénierie des données.",
+        "Formation portant sur l'exploration, l'interprétation et la restitution des données.",
+        "Diplôme de bachelier de l'enseignement du second degré en Sciences et Technologies de l'Économie et de la Gestion.",
+      ],
       educationMore: "Cours en ligne - MOOCs et apprentissage autonome",
+      educationCredential: "Voir les détails",
       projectsHeading: "PROJETS",
       projectLinks: "Voir le projet",
-      projectsMore: "Voir plus sur GitHub",
+      projectsMore: "Voir plus de projets sur GitHub",
       projects: [
         {
           date: "Mai 2026",
           title: "jwebgen - CLI de génération de projets Jakarta Servlet/JSP",
           stack: "Node.js · Java · Jakarta Servlet · JSP · Maven · npm · scripts Shell et Node",
           tasks: [
-            "Conception et publication d'un CLI multiplateforme (npm) générant des projets WAR Jakarta Servlet/JSP avec une structure Maven standard",
-            "Génération de scripts Node.js (.mjs) et Shell pour automatiser le build, le déploiement (Tomcat/WildFly), le live reload et la configuration d'environnement",
-            "Mise en place d'une CI GitHub Actions sur Linux, macOS et Windows, avec semantic-release pour la publication npm automatisée",
+            "Développement et publication d'un CLI multiplateforme pour générer des projets Jakarta Servlet/JSP et automatiser leur déploiement",
           ],
         },
         {
@@ -152,9 +165,7 @@
           title: "CEC - Plateforme de gestion de la Carte d'égalité des chances",
           stack: "Angular · Node.js · Express · MongoDB",
           tasks: [
-            "Conception et implémentation d'API REST avec Node.js/Express pour l'enregistrement des cartes et les workflows d'administration",
-            "Modélisation des schémas MongoDB et développement de la logique métier côté serveur",
-            "Intégration d'un front-end Angular avec des tableaux de bord administrateur interactifs",
+            "Développement d'API REST, de modèles de données et d'un tableau de bord d'administration Angular",
           ],
         },
         {
@@ -162,9 +173,7 @@
           title: "GOTA - Gestion des opérateurs télécoms et des abonnés",
           stack: "Python",
           tasks: [
-            "Développement d'une application Python pour gérer les opérateurs télécoms et les abonnés",
-            "Conception des modèles de données et des opérations CRUD pour les enregistrements opérateurs et abonnés",
-            "Implémentation de la logique métier liée aux abonnements et aux relations avec les opérateurs",
+            "Développement d'une application Python de gestion des opérateurs télécoms, des abonnés télécoms et des workflows CRUD",
           ],
         },
         {
@@ -172,31 +181,28 @@
           title: "User Settings Panel",
           stack: "HTML · CSS · Bootstrap",
           tasks: [
-            "Création d'une interface responsive de gestion de profil avec HTML/CSS et Bootstrap",
-            "Implémentation de formulaires pour les préférences utilisateur, la mise à jour du profil et les paramètres de sécurité",
-            "Application de patterns de mise en page orientés composants pour une interface maintenable",
+            "Création d'une interface responsive de profil et de paramètres de sécurité avec HTML, CSS et Bootstrap",
           ],
         },
       ],
       sidebarLabel: "Colonne de profil",
       summaryHeading: "PROFIL",
       summary:
-        "Ingénieur logiciel spécialisé dans le développement d'applications web et mobiles, avec une solide expérience en développement côté serveur, APIs et conception de bases de données. J'écris du code propre et maintenable, je travaille efficacement dans les environnements Linux et j'applique des compétences en ingénierie et analyse de données pour appuyer les décisions techniques. Collaboratif et rigoureux, avec une expérience pratique des méthodes Agile/Scrum.",
+        "Ingénieur logiciel junior intervenant en développement backend et frontend, ainsi qu'avec les APIs, les bases de données et la data. Curieux et engagé dans l'apprentissage continu, je conçois des logiciels propres et maintenables et je m'adapte rapidement aux nouvelles technologies et aux exigences des projets.",
       strengthsHeading: "ATOUTS",
       strengths: [
         "Résolution de problèmes et esprit analytique",
         "Communication claire et travail d'équipe efficace",
         "Apprentissage rapide avec une approche structurée et rigoureuse",
-        "Capacité à transformer des besoins en code maintenable",
-        "Autonomie et implication dans les projets académiques collaboratifs",
       ],
       skillsHeading: "COMPÉTENCES",
       skillGroups: [
-        ["Langages", "Python, JavaScript, TypeScript, PHP, Java, C++, Swift"],
-        ["Backend et API", "Next.js, Node.js, Express, Django, FastAPI, Laravel, JEE, API REST, API Webhook, API gRPC, API GraphQL"],
-        ["Web et mobile", "HTML/CSS, Tailwind, Bootstrap, React, React Native, Angular, Vue"],
-        ["Données et bases de données", "SQL, NoSQL, Data Engineering, Data Analysis"],
-        ["DevOps et outils", "Git, Linux, GitHub (CI/CD), Agile/Scrum"],
+        ["Langages et scripts", "Python, JavaScript, TypeScript, PHP, Java, C++, Swift, Bash"],
+        ["Backend et API", "Node.js, Nest.js, Next.js, Express, Django, FastAPI, Laravel, JEE, REST, GraphQL, gRPC"],
+        ["Frontend et mobile", "HTML/CSS, Tailwind, Bootstrap, Angular, Vue, React, React Native"],
+        ["Données et stockage", "SQL, NoSQL, MongoDB, Modélisation de bases de données, Data Analysis, Data Engineering"],
+        ["Architecture et conception", "Architecture logicielle, System Design, Structures de données et algorithmes, UML, Design Patterns"],
+        ["DevOps et collaboration", "Git, GitHub, GitHub Actions (CI/CD), Docker, Linux, Notion, Gestion de projet, Agile/Scrum, Agent Coding"],
       ],
       languagesHeading: "LANGUES",
       spokenLanguages: [
@@ -207,16 +213,12 @@
       interestsHeading: "CENTRES D'INTÉRÊT",
       interests: [
         [
-          "Code à impact social",
-          "Intérêt marqué pour les solutions logicielles utiles aux communautés, des plateformes citoyennes aux outils qui améliorent le quotidien.",
+          "E-sport",
+          "",
         ],
         [
-          "Évolution de l'industrie tech",
-          "Veille active sur l'IA, le cloud computing et les pratiques modernes de développement pour rester à jour et progresser comme ingénieur.",
-        ],
-        [
-          "Jeux vidéo",
-          "Goût pour les jeux de stratégie et d'aventure, qui renforcent la créativité, la patience et la résolution de problèmes.",
+          "Tech Industry Evolution",
+          "",
         ],
       ],
       download: "Télécharger",
@@ -267,8 +269,16 @@
 
   function translateEducation(translations) {
     document.querySelectorAll(".education-entry").forEach((entry, index) => {
-      setLeadingText(entry.querySelector("h3 a"), translations.educationTitles[index]);
-      setLeadingText(entry.querySelector("p:last-child a"), translations.educationDates[index]);
+      const title = entry.querySelector("h3 a") || entry.querySelector("h3");
+      setLeadingText(title, translations.educationTitles[index]);
+      const dateLink = entry.querySelector("p:last-of-type a");
+      const date = dateLink || entry.querySelector("p:last-of-type");
+      if (date) {
+        setLeadingText(date, translations.educationDates[index]);
+      }
+      setTextIn(entry, ".education-school", translations.educationSchools[index] || "");
+      setTextIn(entry, ".education-description", translations.educationDescriptions[index] || "");
+      setLeadingText(entry.querySelector(".education-credential"), translations.educationCredential);
     });
   }
 

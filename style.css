@@ -5,11 +5,26 @@
   box-sizing: border-box;
 }
 
+.education-credential {
+  display: inline;
+  margin-left: 8px;
+  color: var(--resume-link-muted);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+}
+
+.education-credential:hover {
+  color: var(--resume-link-muted-hover);
+  text-decoration: underline;
+}
+
 :root {
   --font-sans: "Source Sans 3", "Aptos", "Segoe UI", "Calibri", "Helvetica Neue", Helvetica, sans-serif;
   --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --resume-width: 750px;
-  --resume-left: 310px;
+  --resume-width: 794px;
+  --resume-left: 270px;
   --resume-accent: rgba(255, 191, 191, 1);
   --resume-accent-bg: rgba(255, 191, 191, 0.14);
   --resume-card-bg: rgba(196, 196, 196, 0.12);
@@ -18,21 +33,21 @@
   --resume-link-muted: rgba(52, 52, 52, 0.58);
   --resume-link-muted-hover: rgba(52, 52, 52, 0.78);
   --resume-text: #2e2e2e;
-  --resume-text-secondary: rgba(46, 46, 46, 0.72);
-  --resume-text-muted: rgba(46, 46, 46, 0.56);
+  --resume-text-secondary: rgba(46, 46, 46, 0.84);
+  --resume-text-muted: rgba(46, 46, 46, 0.7);
   --resume-text-on-accent: rgba(255, 255, 255, 0.95);
   --resume-bullet: rgba(52, 52, 52, 0.32);
-  --resume-rule: rgba(52, 52, 52, 0.14);
-  --resume-rule-on-accent: rgba(255, 255, 255, 0.55);
+  --resume-rule: rgba(52, 52, 52, 0.24);
+  --resume-rule-on-accent: rgba(255, 255, 255, 0.7);
   --resume-focus: #9a4545;
-  --fs-xs: 10.5px;
-  --fs-sm: 11.5px;
-  --fs-base: 13px;
-  --fs-md: 14px;
-  --fs-lg: 15px;
-  --fs-name: clamp(28px, 7vw, 36px);
-  --lh-body: 1.55;
-  --lh-snug: 1.4;
+  --fs-xs: 15px;
+  --fs-sm: 16px;
+  --fs-base: 17px;
+  --fs-md: 18px;
+  --fs-lg: 19px;
+  --fs-name: clamp(38px, 7vw, 48px);
+  --lh-body: 1.58;
+  --lh-snug: 1.46;
   --lh-tight: 1.3;
   --track-section: 0.07em;
   --track-label: 0.03em;
@@ -54,7 +69,7 @@ body {
   background-position: center;
   color: var(--resume-text);
   font-family: var(--font-sans);
-  font-size: clamp(13px, 1.6vw, 14px);
+  font-size: clamp(17px, 1.6vw, 18px);
   line-height: var(--lh-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -118,7 +133,7 @@ body {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: clamp(8px, 2vw, 10px);
+  padding: 14px;
   box-sizing: border-box;
   font-feature-settings: "kern" 1, "liga" 1;
   font-kerning: normal;
@@ -139,14 +154,14 @@ body {
   order: 2;
   flex: 1;
   min-width: 0;
-  padding: clamp(14px, 3vw, 20px);
+  padding: 22px 0 22px 24px;
 }
 
 /* Sidebar top: photo and summary */
 .left-up {
   height: auto;
   background-color: var(--resume-accent);
-  padding: clamp(14px, 3vw, 20px);
+  padding: 20px 18px;
   position: relative;
 }
 
@@ -190,7 +205,7 @@ body {
   font-size: var(--fs-lg);
   color: var(--resume-text-on-accent);
   text-align: right;
-  letter-spacing: var(--track-section);
+  letter-spacing: 0.09em;
 }
 
 .summary hr {
@@ -210,11 +225,29 @@ body {
   letter-spacing: 0.01em;
 }
 
+.education-description {
+  color: var(--resume-text-secondary);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+  margin: 7px 0 6px;
+  letter-spacing: 0.015em;
+  font-style: normal;
+}
+
+.education-school {
+  color: var(--resume-text);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  margin-top: 6px;
+  letter-spacing: 0.01em;
+}
+
 
 /* Sidebar bottom */
 .left-down {
   background-color: rgba(196, 196, 196, 0.2);
-  padding: clamp(14px, 3vw, 20px);
+  padding: 20px 18px;
   flex-grow: 1;
   margin-top: 10px;
   position: relative;
@@ -297,12 +330,12 @@ body {
   border: none;
   height: 1px;
   background-color: var(--resume-rule);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .section-block {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .section-block:last-child {
@@ -324,7 +357,7 @@ body {
   color: var(--resume-text-secondary);
   position: relative;
   padding-left: 12px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   line-height: var(--lh-snug);
   letter-spacing: 0.01em;
 }
@@ -348,11 +381,12 @@ body {
   margin-bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px 14px;
+  gap: 20px 24px;
 }
 
 .skill-group {
   min-width: 0;
+  padding: 0;
 }
 
 .skill-group h3 {
@@ -360,7 +394,7 @@ body {
   font-weight: 600;
   font-size: var(--fs-sm);
   color: var(--resume-text);
-  margin-bottom: 3px;
+  margin-bottom: 7px;
   letter-spacing: var(--track-label);
 }
 
@@ -371,6 +405,10 @@ body {
   line-height: var(--lh-snug);
   color: var(--resume-text-secondary);
   letter-spacing: 0.01em;
+}
+
+.skill-group + .skill-group {
+  margin-top: 0;
 }
 
 .skill-group:last-child:nth-child(odd) {
@@ -415,7 +453,7 @@ body {
 .interests-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .interest-item h3 {
@@ -423,8 +461,18 @@ body {
   font-weight: 600;
   font-size: var(--fs-sm);
   color: var(--resume-text);
-  margin-bottom: 2px;
+  margin-bottom: 0;
+  padding-left: 12px;
   letter-spacing: var(--track-label);
+  position: relative;
+}
+
+.interest-item h3::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--resume-bullet);
+  font-weight: 400;
 }
 
 .interest-item p {
@@ -434,6 +482,10 @@ body {
   line-height: var(--lh-snug);
   color: var(--resume-text-secondary);
   letter-spacing: 0.01em;
+}
+
+.interest-item p:empty {
+  display: none;
 }
 
 
@@ -515,7 +567,7 @@ body {
   gap: 5px;
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: clamp(11px, 2.8vw, 12px);
+  font-size: clamp(13px, 2.8vw, 14px);
   color: var(--resume-text-secondary);
   text-decoration: none;
   font-variant-numeric: tabular-nums;
@@ -543,7 +595,7 @@ body {
 
 .contact-sep {
   color: rgba(52, 52, 52, 0.3);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   user-select: none;
 }
@@ -557,7 +609,7 @@ body {
 }
 
 .education-list .education-entry {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .education-list h3 {
@@ -579,7 +631,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-.education-list .education-entry p:last-child {
+.education-list .education-entry > p:last-of-type {
   color: var(--resume-link);
   font-weight: 500;
   font-size: var(--fs-sm);
@@ -599,6 +651,12 @@ body {
   margin-bottom: 12px;
 }
 
+.education-item--card {
+  padding: 8px 10px;
+  background: var(--resume-card-bg);
+  border-radius: 4px;
+}
+
 .education-more-icon {
   display: flex;
   justify-content: center;
@@ -609,7 +667,7 @@ body {
   text-align: center;
   color: var(--resume-text-muted);
   font-size: var(--fs-sm);
-  font-style: italic;
+  font-style: normal;
   letter-spacing: 0.01em;
 }
 
@@ -843,7 +901,7 @@ body {
   height: 100%;
   border-radius: 999px;
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
   transition: color 0.18s ease;
@@ -892,7 +950,7 @@ body {
 /* Responsive layout */
 @media (max-width: 820px) {
   :root {
-    --resume-left: 42%;
+    --resume-left: 38%;
   }
 
   .projects-grid {
@@ -1055,13 +1113,23 @@ body {
 }
 
 @media print {
+  :root {
+    --fs-xs: 16px;
+    --fs-sm: 17px;
+    --fs-base: 17px;
+    --fs-md: 18px;
+    --fs-lg: 19px;
+    --fs-name: clamp(38px, 7vw, 48px);
+  }
+
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
   @page {
-    margin: 0;
+    size: A4 portrait;
+    margin: 10mm;
   }
 
   html,
@@ -1089,20 +1157,96 @@ body {
     width: auto;
   }
 
-  .container {
-    width: var(--resume-width);
+  .pdf-document {
+    width: auto;
+  }
+
+  .pdf-page {
+    display: flex;
+    flex-direction: row;
+    width: auto;
     max-width: none;
+    padding: 0;
     box-shadow: none;
     overflow: visible;
-    page-break-inside: avoid;
     break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .pdf-page + .pdf-page {
+    break-before: page;
+    page-break-before: always;
   }
 
   .left,
   .right {
-    width: auto;
-    page-break-inside: avoid;
+    display: flex;
+    min-width: 0;
+  }
+
+  .pdf-page .left {
+    order: 1;
+    width: var(--resume-left);
+    flex-direction: column;
+  }
+
+  .pdf-page .right {
+    order: 2;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px 0 22px 24px;
+  }
+
+  .education-entry,
+  .project-item,
+  .section-block {
     break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .skill-group p,
+  .project-stack,
+  .project-date,
+  .education-credential {
+    font-size: var(--fs-sm);
+  }
+
+  .contact-item {
+    font-size: var(--fs-sm);
+  }
+
+  .projects-more {
+    position: static;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .education-list .education-entry {
+    margin-bottom: 6px;
+  }
+
+  .education-description,
+  .education-list p {
+    line-height: 1.3;
+  }
+
+  .education-description {
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 
   a[href]::after {
