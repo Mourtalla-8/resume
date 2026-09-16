@@ -25,11 +25,12 @@
   --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --resume-width: 794px;
   --resume-left: 270px;
-  --resume-accent: rgba(255, 191, 191, 1);
-  --resume-accent-bg: rgba(255, 191, 191, 0.14);
+  --resume-theme: #1E93AB;
+  --resume-accent: var(--resume-theme);
+  --resume-accent-bg: color-mix(in srgb, var(--resume-theme) 14%, transparent);
   --resume-card-bg: rgba(196, 196, 196, 0.12);
-  --resume-link: #c4a5a5;
-  --resume-link-hover: #a88888;
+  --resume-link: color-mix(in srgb, var(--resume-theme) 78%, #2e2e2e);
+  --resume-link-hover: color-mix(in srgb, var(--resume-theme) 62%, #2e2e2e);
   --resume-link-muted: rgba(52, 52, 52, 0.58);
   --resume-link-muted-hover: rgba(52, 52, 52, 0.78);
   --resume-text: #2e2e2e;
@@ -39,7 +40,7 @@
   --resume-bullet: rgba(52, 52, 52, 0.32);
   --resume-rule: rgba(52, 52, 52, 0.24);
   --resume-rule-on-accent: rgba(255, 255, 255, 0.7);
-  --resume-focus: #9a4545;
+  --resume-focus: color-mix(in srgb, var(--resume-theme) 62%, #2e2e2e);
   --fs-xs: 15px;
   --fs-sm: 16px;
   --fs-base: 17px;
@@ -432,7 +433,7 @@ body {
 .languages .langues > div p:first-child {
   font-family: var(--font-sans);
   font-weight: 600;
-  text-decoration: underline rgba(255, 191, 191, 0.65);
+  text-decoration: underline color-mix(in srgb, var(--resume-theme) 65%, transparent);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
   font-size: var(--fs-base);
@@ -915,7 +916,7 @@ body {
   height: calc(100% - 8px);
   border-radius: 999px;
   background-color: var(--resume-accent);
-  box-shadow: 0 6px 14px rgba(154, 69, 69, 0.22);
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--resume-theme) 22%, transparent);
   transition: transform 0.22s ease;
 }
 
@@ -1114,6 +1115,7 @@ body {
 
 @media print {
   :root {
+    --resume-theme: #007979;
     --fs-xs: 16px;
     --fs-sm: 17px;
     --fs-base: 17px;
