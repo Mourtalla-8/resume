@@ -25,7 +25,7 @@
   --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --resume-width: 794px;
   --resume-left: 270px;
-  --resume-theme: #1E93AB;
+  --resume-theme: #007979;
   --resume-accent: var(--resume-theme);
   --resume-accent-bg: color-mix(in srgb, var(--resume-theme) 14%, transparent);
   --resume-card-bg: rgba(196, 196, 196, 0.12);

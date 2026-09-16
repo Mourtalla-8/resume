@@ -49,19 +49,17 @@ The generated files are:
 - `Resume_Mourtalla_Toure_Software_Engineer.pdf`
 - `Resume_Mourtalla_Toure_Ingenieur_Logiciel.pdf`
 
-#### Change the PDF theme
+#### Change the theme
 
-The web theme and PDF theme are intentionally separate. Change the PDF color in `style.css` inside the `@media print` block:
+The web and PDF versions use the same theme color. Change `--resume-theme` in the top-level `:root` block:
 
 ```css
-@media print {
-  :root {
-    --resume-theme: #007979;
-  }
+:root {
+  --resume-theme: #007979;
 }
 ```
 
-All PDF accent backgrounds, borders, links, focus colors, language underlines, and related derived colors use this variable. The web theme is configured separately in the top-level `:root` block.
+The print stylesheet keeps the same theme value and only overrides typography and pagination-related settings. Accent backgrounds, borders, links, focus colors, language underlines, and related derived colors are derived from this variable in both the browser and PDF.
 
 #### Change PDF typography
 
